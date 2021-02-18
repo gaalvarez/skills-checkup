@@ -1,18 +1,18 @@
 <template>
   <div class="home">
+    <sc-page-title title="Skill Quiz"></sc-page-title>
     <img alt="Vue logo" src="../assets/logo.png" />
-    <HelloWorld msg="Welcome to Your Vue.js + TypeScript App" />
   </div>
 </template>
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import HelloWorld from "@/components/HelloWorld.vue"; // @ is an alias to /src
+import SCPageTitleVue from "@/components/SCPageTitle.vue";
 
 export default defineComponent({
   name: "Home",
   components: {
-    HelloWorld
-  }
+    "sc-page-title": SCPageTitleVue,
+  },
 });
 </script>
