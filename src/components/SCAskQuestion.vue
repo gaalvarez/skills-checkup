@@ -86,3 +86,20 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass" scoped>
+.selected
+    background-color: lightblue
+
+.options
+    ul
+        text-align: left
+        list-style-type: none
+    ul > li
+        margin: 5px
+        padding: 5px
+.question
+    margin: 10px
+    font-size: 24px
+    font-weight: bold
+</style>

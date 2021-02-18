@@ -26,3 +26,10 @@ export default defineComponent({
   },
 });
 </script>
+
+<style lang="sass" scoped>
+.score
+    margin: 10px
+    font-size: 20px
+    font-weight: bold
+</style>

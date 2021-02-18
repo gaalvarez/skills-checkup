@@ -39,7 +39,7 @@ export default defineComponent({
     };
   },
   created() {
-    this.questions = QUESTIONS;
+    this.questions = QUESTIONS[0].questions;
   },
   watch: {
     optionSelected(newValue, oldValue) {
