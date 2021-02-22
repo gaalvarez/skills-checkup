@@ -11,3 +11,10 @@ export interface ResponseModel {
   response: number;
   correct: number;
 }
+
+export interface QuizModel {
+  id: number;
+  name: string;
+  description?: string;
+  questions?: QuestionModel[];
+}

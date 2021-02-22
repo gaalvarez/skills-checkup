@@ -8,7 +8,7 @@ const routes: Array<RouteRecordRaw> = [
       import(/* webpackChunkName: "AngularQuiz" */ "../views/ListQuiz.vue"),
   },
   {
-    path: "skill-quiz",
+    path: "skill-quiz/:id",
     name: "AngularQuiz",
     component: () =>
       import(/* webpackChunkName: "AngularQuiz" */ "../views/SkillQuiz.vue"),

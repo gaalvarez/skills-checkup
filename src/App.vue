@@ -1,7 +1,7 @@
 <template>
   <div id="nav">
     <router-link to="/quiz/list-quiz">Home</router-link> |
-    <router-link to="/quiz/skill-quiz">Presentar Quiz</router-link>
+    <!-- <router-link to="/quiz/skill-quiz">Presentar Quiz</router-link> -->
   </div>
   <router-view />
 </template>

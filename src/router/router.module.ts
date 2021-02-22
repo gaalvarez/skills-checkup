@@ -7,26 +7,7 @@ import {
   RouteRecordRaw,
 } from "vue-router";
 
-const routes: Array<RouteRecordRaw> = [
-  //podrían ponerse rutas core
-  {
-    path: "/",
-    name: "Home",
-    component: () =>
-      import(
-        /* webpackChunkName: "about" */ "../features/present-quiz/views/SkillQuiz.vue"
-      ),
-  },
-  //   {
-  //     path: "/angular-quiz",
-  //     name: "AngularQuiz",
-  //     // route level code-splitting
-  //     // this generates a separate chunk (about.[hash].js) for this route
-  //     // which is lazy-loaded when the route is visited.
-  //     component: () =>
-  //       import(/* webpackChunkName: "about" */ "../views/SkillQuiz.vue"),
-  //   },
-];
+const routes: Array<RouteRecordRaw> = [];
 
 export class RouterModule implements VueModule {
   readonly name: string = "router";
@@ -40,6 +21,7 @@ export class RouterModule implements VueModule {
   }
 
   install(app: App<any>) {
-    app.use(this.router as Router);
+    // app.use(this.router as Router);
+    //por ahora nose hace nada
   }
 }
