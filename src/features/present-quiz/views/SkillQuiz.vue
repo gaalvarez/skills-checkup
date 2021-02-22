@@ -18,16 +18,14 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
-import SCAskQuestionVue from "@/components/SCAskQuestion.vue";
-import SCPageTitleVue from "../components/SCPageTitle.vue";
+import SCAskQuestionVue from "../components/SCAskQuestion.vue";
 import { SkillQuizStateModel } from "../model/state.model";
-import { QUESTIONS } from "@/views/angular.quiz";
+import { QUESTIONS } from "./angular.quiz";
 import { QuestionModel, ResponseModel } from "../model/model";
 
 export default defineComponent({
   components: {
     "sc-ask-question": SCAskQuestionVue,
-    "sc-page-title": SCPageTitleVue,
   },
   data: (): SkillQuizStateModel => {
     return {

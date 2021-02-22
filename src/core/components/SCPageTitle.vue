@@ -18,6 +18,6 @@ export default defineComponent({
 
 <style lang="sass" scoped>
 .title-wrapper
-    padding: 30px
-    text-align: center
+  padding: 30px
+  text-align: center
 </style>

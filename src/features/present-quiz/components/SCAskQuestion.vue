@@ -36,8 +36,8 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { AskQuestionStateModel } from "@/model/state.model";
-import { QuestionModel } from "@/model/model";
+import { AskQuestionStateModel } from "../model/state.model";
+import { QuestionModel } from "../model/model";
 
 export default defineComponent({
   props: {
@@ -89,17 +89,17 @@ export default defineComponent({
 
 <style lang="sass" scoped>
 .selected
-    background-color: lightblue
+  background-color: lightblue
 
 .options
-    ul
-        text-align: left
-        list-style-type: none
+  ul
+    text-align: left
+    list-style-type: none
     ul > li
-        margin: 5px
-        padding: 5px
+      margin: 5px
+      padding: 5px
 .question
-    margin: 10px
-    font-size: 24px
-    font-weight: bold
+  margin: 10px
+  font-size: 24px
+  font-weight: bold
 </style>
