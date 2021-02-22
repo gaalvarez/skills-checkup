@@ -1,4 +1,4 @@
-import { QuestionModel, ResponseModel } from "@/model/model";
+import { QuestionModel, ResponseModel } from "@/features/quiz/model/model";
 
 export interface AskQuestionStateModel {
   optionSelected: number;
