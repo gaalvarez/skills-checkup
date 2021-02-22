@@ -1,6 +1,6 @@
 <template>
   <div>
-    <sc-page-title title="Angular Quiz"></sc-page-title>
+    <sc-page-title :title="title"></sc-page-title>
     <div class="header">
       <span
         >Pregunta {{ currentIndexQuestion + 1 }} de {{ questions.length }}</span
@@ -21,7 +21,8 @@ import { defineComponent } from "vue";
 import SCAskQuestionVue from "../components/SCAskQuestion.vue";
 import { SkillQuizStateModel } from "../model/state.model";
 import { QUESTIONS } from "./angular.quiz";
-import { QuestionModel, ResponseModel } from "../model/model";
+import { QuestionModel, QuizModel, ResponseModel } from "../model/model";
+import { getQuizQuestions } from "../api/quiz.api";
 
 export default defineComponent({
   components: {
@@ -37,7 +38,9 @@ export default defineComponent({
     };
   },
   created() {
-    this.questions = QUESTIONS[0].questions;
+    const quiz = getQuizQuestions(+this.$route.params.id);
+    this.questions = quiz.questions as QuestionModel[];
+    this.title = quiz.name;
   },
   watch: {
     optionSelected(newValue, oldValue) {
