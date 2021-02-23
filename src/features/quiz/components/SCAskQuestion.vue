@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div v-if="question">
     <div class="question-wrapper">
       <div class="question">
         <span>{{ question.question }}</span>

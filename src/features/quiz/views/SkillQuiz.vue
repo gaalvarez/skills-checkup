@@ -38,9 +38,10 @@ export default defineComponent({
     };
   },
   created() {
-    const quiz = getQuizQuestions(+this.$route.params.id);
-    this.questions = quiz.questions as QuestionModel[];
-    this.title = quiz.name;
+    getQuizQuestions(+this.$route.params.id).then((quiz) => {
+      this.questions = quiz.questions as QuestionModel[];
+      this.title = quiz.name;
+    });
   },
   watch: {
     optionSelected(newValue, oldValue) {

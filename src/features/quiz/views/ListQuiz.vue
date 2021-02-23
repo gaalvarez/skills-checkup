@@ -24,7 +24,7 @@ export default defineComponent({
     return { quizList: [] };
   },
   created() {
-    this.quizList = getQuizListData();
+    getQuizListData().then((quizzes) => (this.quizList = quizzes));
   },
   methods: {
     navigateToQuiz(id: number) {
