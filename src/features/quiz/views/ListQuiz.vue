@@ -24,7 +24,12 @@ export default defineComponent({
     return { quizList: [] };
   },
   created() {
-    getQuizListData().then((quizzes) => (this.quizList = quizzes));
+    getQuizListData()
+      .then((response) => {
+        console.log(response);
+        return response;
+      })
+      .then((quizzes) => (this.quizList = quizzes));
   },
   methods: {
     navigateToQuiz(id: number) {
