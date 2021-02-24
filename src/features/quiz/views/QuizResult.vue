@@ -3,14 +3,19 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
+import { useStore } from "../store/quiz.store";
 import SCResultQuiz from "../components/SCResultQuiz.vue";
 
 export default defineComponent({
-  computed: {
-    responses() {
-      return [];
-    },
+  setup() {
+    const store = useStore();
+    const responses = computed(() => {
+      return store.state.responses;
+    });
+    return {
+      responses,
+    };
   },
   components: { "sc-result-quiz": SCResultQuiz },
 });

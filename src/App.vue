@@ -1,7 +1,10 @@
 <template>
   <div id="nav">
     <router-link to="/quiz/list-quiz">Lista de Pruebas</router-link> |
-    <router-link to="/quiz/skill-quiz">Presentar Quiz</router-link>
+    <router-link to="/reports/response-report"
+      >Reporte de respuestas</router-link
+    >
+    <!-- <router-link to="/quiz/skill-quiz">Presentar Quiz</router-link> -->
   </div>
   <router-view />
 </template>

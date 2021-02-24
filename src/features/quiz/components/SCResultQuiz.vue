@@ -14,7 +14,12 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import { scCheckDirectiveOption } from "../directives/check.response";
+
 export default defineComponent({
+  directives: {
+    check: scCheckDirectiveOption,
+  },
   props: ["responses"],
   data() {
     return {};

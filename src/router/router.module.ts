@@ -23,6 +23,6 @@ export class RouterModule implements VueModule {
   }
 
   install(app: App) {
-    app.use(this.router as Router);
+    //app.use(this.router as Router);
   }
 }

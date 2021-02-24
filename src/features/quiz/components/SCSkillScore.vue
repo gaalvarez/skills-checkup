@@ -6,7 +6,7 @@
 
 <script lang="ts">
 import { defineComponent, PropType } from "vue";
-import { ResponseModel } from "@/model/model";
+import { ResponseModel } from "../model/model";
 export default defineComponent({
   name: "SCSkillScore",
   props: {
@@ -29,7 +29,7 @@ export default defineComponent({
 
 <style lang="sass" scoped>
 .score
-    margin: 10px
-    font-size: 20px
-    font-weight: bold
+  margin: 10px
+  font-size: 20px
+  font-weight: bold
 </style>

@@ -8,6 +8,4 @@ export interface SkillQuizStateModel {
   title: string;
   questions: QuestionModel[];
   currentIndexQuestion: number;
-  responses: ResponseModel[];
-  isFinished: boolean;
 }

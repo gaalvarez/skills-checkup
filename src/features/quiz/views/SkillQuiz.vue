@@ -17,24 +17,31 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { computed, defineComponent } from "vue";
 import SCAskQuestionVue from "../components/SCAskQuestion.vue";
 import { SkillQuizStateModel } from "../model/state.model";
-import { QUESTIONS } from "./angular.quiz";
-import { QuestionModel, QuizModel, ResponseModel } from "../model/model";
+import { QuestionModel, ResponseModel } from "../model/model";
 import { getQuizQuestions } from "../api/quiz.api";
+import { useStore } from "../store/quiz.store";
 
 export default defineComponent({
   components: {
     "sc-ask-question": SCAskQuestionVue,
+  },
+  setup() {
+    const store = useStore();
+    const addResponse = (response: ResponseModel) => {
+      return store.commit("addResponse", response);
+    };
+    return {
+      addResponse,
+    };
   },
   data: (): SkillQuizStateModel => {
     return {
       title: "Skills Checkup",
       questions: [],
       currentIndexQuestion: 0,
-      responses: [],
-      isFinished: false,
     };
   },
   created() {
@@ -57,14 +64,8 @@ export default defineComponent({
     nextQuestion() {
       this.currentIndexQuestion = this.currentIndexQuestion + 1;
     },
-    addResponse(response: ResponseModel) {
-      this.responses = this.responses.filter((res) => {
-        return res.questionId !== this.currentQuestion.id;
-      });
-      this.responses = [...this.responses, response];
-    },
     finish() {
-      this.isFinished = true;
+      this.$router.push({ name: "QuizResult" });
     },
   },
 });

@@ -68,6 +68,7 @@ export default defineComponent({
   },
   methods: {
     nextQuestion() {
+      this.optionSelected = -1;
       this.$emit("nextQuestion");
     },
     addResponse(indexOption: number) {

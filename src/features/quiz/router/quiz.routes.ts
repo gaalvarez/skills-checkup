@@ -13,6 +13,12 @@ const routes: Array<RouteRecordRaw> = [
     component: () =>
       import(/* webpackChunkName: "AngularQuiz" */ "../views/SkillQuiz.vue"),
   },
+  {
+    path: "quiz-result",
+    name: "QuizResult",
+    component: () =>
+      import(/* webpackChunkName: "QuizResult" */ "../views/QuizResult.vue"),
+  },
 ];
 
 export default routes;
